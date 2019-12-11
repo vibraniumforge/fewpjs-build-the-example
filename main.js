@@ -44,6 +44,7 @@ function clickLikeGlyph(event) {
       }
     })
     .catch(function(error) {
+<<<<<<< HEAD
       errorFunction(error);
     });
 }
@@ -51,6 +52,15 @@ function clickLikeGlyph(event) {
 function errorFunction(error) {
   modal.classList.remove("hidden");
   modal.innerText = error;
+=======
+      modal.classList.remove("hidden");
+      modal.innerText = error;
+      errorFunction();
+    });
+}
+
+function errorFunction() {
+>>>>>>> f351d6c08128c0444583f4707954248b69777328
   setTimeout(function() {
     clearError();
   }, 5000);
