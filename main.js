@@ -44,13 +44,13 @@ function clickLikeGlyph(event) {
       }
     })
     .catch(function(error) {
-      modal.classList.remove("hidden");
-      modal.innerText = error;
-      errorFunction();
+      errorFunction(error);
     });
 }
 
-function errorFunction() {
+function errorFunction(error) {
+  modal.classList.remove("hidden");
+  modal.innerText = error;
   setTimeout(function() {
     clearError();
   }, 5000);
